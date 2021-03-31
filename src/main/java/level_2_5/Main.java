@@ -10,13 +10,9 @@ public class Main {
     static float sum1 = 0;
     static float sum2 = 0;
 
-
-
     public static void main(String[] args) {
         singleThread(arr);
         multiThreads(arr, 7);
-
-
     }
 
     //Single Thread
@@ -25,8 +21,6 @@ public class Main {
         calcArr(arr);
         System.out.println(System.currentTimeMillis() - a);
     }
-
-
 
     //MultiThreads
     static void multiThreads(float[] arr, int parts) {
@@ -59,8 +53,4 @@ public class Main {
             arr[i] = (float)(arr[i] * Math.sin(0.2f + (float)i / 5) * Math.cos(0.2f + (float)i / 5) * Math.cos(0.4f + (float)i / 2));
         }
     }
-
-
-
-
 }
