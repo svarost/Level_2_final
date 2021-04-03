@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-    static final int size = 100_000_000;
+    static final int size = 100;
     private static float[] arr = new float[size];
-    static float sum1 = 0;
+    static float sum = 0;
     static float sum2 = 0;
 
     public static void main(String[] args) {
@@ -48,9 +48,12 @@ public class Main {
     }
 
     static void calcArr(float[] arr) {
+        sum = 0;
         Arrays.fill(arr, 1);
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (float)(arr[i] * Math.sin(0.2f + (float)i / 5) * Math.cos(0.2f + (float)i / 5) * Math.cos(0.4f + (float)i / 2));
+        for (float v : arr) {
+//            arr[i] = (float)(arr[i] * Math.sin(0.2f + (float)i / 5) * Math.cos(0.2f + (float)i / 5) * Math.cos(0.4f + (float)i / 2));
+            sum += v;
         }
+        System.out.println("sum = " + sum);
     }
 }
